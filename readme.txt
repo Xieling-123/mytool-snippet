@@ -1,22 +1,33 @@
+注意保存Ctrol+S
 注意每日至少备份一次
 ::------首次-----------------------------------------------------
+#建立仓库复制地址
+
 git config --global user.name "你的GitHub用户名"
 git config --global user.email "你的GitHub邮箱"
-建立.gitignore文件
+
+#建立.gitignore文件
+
 cd D:\mytool\01_doc\snippet
-git init
-git add .
-git commit -m "snippet 备份1"
-git remote add origin https://github.com/Xieling-123/mytool-snippet.git
-git push -u origin master
+
+git init	#初始化本地仓库
+git add .	#添加所有文件
+git commit -m "snippet 备份1"	#提交到本地
+git remote add origin https://github.com/Xieling-123/mytool-snippet.git	#关联仓库
+git push -u origin master	#推送，本地默认master，github默认main
 ::---------更新-------------------------------------------------cd D:\mytool\01_doc\snippet
+
+git config --global core.editor notepad    #把 Git 默认编辑器改成记事本（就不会遇到 Vim 的交换文件问题了，一次就行
+
 git status              # 查看改动
-git pull                # 【先拉取远程最新变更，避免冲突】
+git pull --no-edit origin master  	# 【先拉取远程最新变更，避免冲突,默认合并无需问我】
 git add .               # 添加本地改动
 git commit -m "更新内容：修复脚本错误 / 增加注释等"
 git push origin master  # 推送
-::---------------------------------------------------------------
 
+
+
+::-------一下内容是.bat----------------------------------
 @echo off
 :: ============================================================
 :: 脚本名称：backup_snippets.bat
@@ -34,7 +45,8 @@ git push origin master  # 推送
 title Snippet Backup Tool
 echo 开始备份 Snippets 文件...
 
-:: ---------- 定义源路径和目标路径（根据您的实际情况修改）----------
+
+:: ---------- 定义源路径和目标路径（根据您的实际情况修改）-------
 :: VS Code 的 snippets 源文件夹
 set "VSCODE_SOURCE=C:\Users\20503\AppData\Roaming\Code\User\snippets"
 :: VS Code 的备份目标文件夹
@@ -44,6 +56,7 @@ set "VSCODE_TARGET=D:\mytool\01_doc\snippet\vscode_snippet_backup"
 set "POSITRON_SOURCE=C:\Users\20503\AppData\Roaming\Positron\User\snippets"
 :: Positron 的备份目标文件夹
 set "POSITRON_TARGET=D:\mytool\01_doc\snippet\positron_snippet_backup"
+
 
 :: ---------- 备份 VS Code ----------
 :: 检查源文件夹是否存在，避免因路径不存在而报错
@@ -59,6 +72,7 @@ if exist "%VSCODE_SOURCE%" (
 ) else (
     echo [警告] VS Code 源文件夹不存在，已跳过。
 )
+
 
 :: ---------- 备份 Positron ----------
 if exist "%POSITRON_SOURCE%" (
