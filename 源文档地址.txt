@@ -1,19 +1,13 @@
 ::---------------------------------------------------------------
 git config --global user.name "你的GitHub用户名"
 git config --global user.email "你的GitHub邮箱"
-# 进入你的备份脚本所在目录
+建立.gitignore文件
 cd D:\mytool\01_doc\snippet
-
-# 初始化本地 Git 仓库
 git init
-
 git add .
 git commit -m "snippet 备份1"
 git remote add origin https://github.com/Xieling-123/mytool-snippet.git
-::
-::
-::
-::
+git push -u origin master
 ::---------------------------------------------------------------
 
 @echo off
