@@ -1,4 +1,4 @@
-每天中午备份一次  下午备份一次 凌晨备份一次 备份完自动上传github
+注意每日至少备份一次
 ::------首次-----------------------------------------------------
 git config --global user.name "你的GitHub用户名"
 git config --global user.email "你的GitHub邮箱"
