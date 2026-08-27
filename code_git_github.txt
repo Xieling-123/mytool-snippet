@@ -20,7 +20,7 @@ git push -u origin master	#推送，本地默认master，github默认main
 git config --global core.editor notepad    #把 Git 默认编辑器改成记事本（就不会遇到 Vim 的交换文件问题了，一次就行
 
 git status              # 查看改动
-git pull --no-edit origin master  	# 【先拉取远程最新变更，避免冲突,默认合并无需问我】
+git pull --no-edit origin master  	# 【！先拉取远程最新变更，避免冲突,默认合并无需问我】
 git add .               # 添加本地改动
 git commit -m "更新内容：修复脚本错误 / 增加注释等"
 git push origin master  # 推送
