@@ -1,0 +1,76 @@
+{
+  "deepseek学函数": {
+    "prefix": "deepseek学函数",
+    "body": [
+      "glimpse()的全部参数放一个例子(一键运行,中文变量,参数解释说人话常见例子注释在旁边,例子呈现python常用的表现形式,临时环境,临时文件读入读出,做完就删)+一个最常用的用法举例(一键运行,中文变量,参数解释说人话常见例子注释在旁边，例子呈现python常用的表现形式,临时环境,临时文件读入读出,做完就删)${0}"
+    ],
+    "description": "deepseek学函数"
+  },
+  "tempfile.NamedTemporaryFile创建临时文件-理论": {
+    "prefix": "tempfile.namedtemporaryfile创建临时文件-理论",
+    "body": [
+      "import tempfile",
+      "",
+      "# ========== NamedTemporaryFile 全部参数演示 ==========",
+      "# 功能：创建临时文件，指定模式、缓冲、编码、后缀等，写入并读取内容",
+      "",
+      "with tempfile.NamedTemporaryFile(",
+      "    mode='w+',          # 读写文本模式（w+ 可读可写，文件指针初始在开头）",
+      "    buffering=1,        # 行缓冲（1 表示行缓冲，0 表示无缓冲，>1 表示缓冲区大小）",
+      "    encoding='utf-8',   # 文本编码",
+      "    newline='',         # 换行符转换（'' 表示不转换，None 表示系统默认）",
+      "    suffix='.txt',      # 文件名后缀",
+      "    prefix='临时文件_', # 文件名前缀（中文可用）",
+      "    dir=None,           # 临时文件目录（None 表示系统默认临时目录）",
+      "    delete=True         # 关闭文件时自动删除（默认为 True）",
+      ") as 临时文件对象:",
+      "",
+      "    # 写入多行内容",
+      "    临时文件对象.write(\"第一行数据\\n第二行数据\\n第三行数据\")",
+      "    ",
+      "    # 将文件指针移回开头，以便读取",
+      "    临时文件对象.seek(0)",
+      "    ",
+      "    # 读取全部内容",
+      "    全部内容 = 临时文件对象.read()",
+      "    ",
+      "    print(\"【全部参数演示】读取到的内容：\")",
+      "    print(全部内容)",
+      "",
+      "# with 块结束后，文件自动关闭并删除（因为 delete=True）${0}"
+    ],
+    "description": "tempfile.NamedTemporaryFile创建临时文件"
+  },
+  "代码块-shift+enter": {
+    "prefix": "代码块shift+enter写定义测试在交互md代码解释",
+    "body": [
+      "# %%${0}"
+    ],
+    "description": "代码块"
+  },
+  "帮助": {
+    "prefix": "帮助",
+    "body": [
+      "# %% ",
+      "# 1、帮助查找函数的参数+类的属性和方法。",
+      "# 2、看轮子说明书，构造对象，对象调用方法和属性，搞不定就自己写类",
+      "",
+      "# 修改",
+      "import pandas as pd",
+      "查找对象=pd.DataFrame",
+      "查找对象属性方法=pd.DataFrame.mean",
+      "",
+      "# 输出，函数还是类，函数参数，类的属性和方法",
+      "print(type(查找对象))",
+      "print(help(查找对象属性方法))",
+      "",
+      "#print(dir(查找对象))只看公有（非下划线开头）的属性和方法",
+      "print([attr for attr in dir(pd.DataFrame) if not attr.startswith('_')])",
+      "",
+      "# 快捷键",
+      "# 查属性或者方法-下拉列表",
+      "# 悬停+F12或者Ctrl+点击${0}"
+    ],
+    "description": "帮助"
+  }
+}

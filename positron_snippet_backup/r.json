@@ -1,0 +1,226 @@
+{
+  "帮助": {
+    "prefix": "帮助",
+    "body": [
+      "\t#包学习",
+      "\tinstall.packages()",
+      "\tlibrary()",
+      "\t",
+      "\thelp()#函数",
+      "\thelp#快捷键",
+      "\texample()#例子",
+      "\t",
+      "\tbrowseVignettes()#包的小品文",
+      "\t",
+      "\tgetNamespaceExports(\"rstudioapi\")#查包函数",
+      "\tfind(\"\")#查函数的包",
+      "\tdata()#查包数据集"
+    ],
+    "description": ""
+  },
+  "包函数": {
+    "prefix": "包函数",
+    "body": [
+      "getNamespaceExports(\"\")#查包函数"
+    ],
+    "description": ""
+  },
+  "包里查函数find": {
+    "prefix": "包里查函数find",
+    "body": [
+      "find(\"\")#查函数的包"
+    ],
+    "description": ""
+  },
+  "包数据集data": {
+    "prefix": "包数据集data",
+    "body": [
+      "data()#查包数据集"
+    ],
+    "description": ""
+  },
+  "包小品文browseVignettes": {
+    "prefix": "包小品文browseVignettes",
+    "body": [
+      "browseVignettes()#包的小品文"
+    ],
+    "description": ""
+  },
+  "包例子example": {
+    "prefix": "包例子example",
+    "body": [
+      "example()#例子"
+    ],
+    "description": ""
+  },
+  "包p_load一次性加载多个包": {
+    "prefix": "包p_load一次性加载多个包",
+    "body": [
+      "pacman::p_load(readr, clipr)"
+    ],
+    "description": ""
+  },
+  "包加载pload": {
+    "prefix": "包加载pload",
+    "body": [
+      "pacman::p_load(readr, clipr)"
+    ],
+    "description": ""
+  },
+  "浏览器打开帮助": {
+    "prefix": "浏览器打开帮助",
+    "body": [
+      "options(browser = \"C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe\",help_type = \"html\")"
+    ],
+    "description": ""
+  },
+  "openxlsx2::wb_open打开现有Excel工作簿": {
+    "prefix": "openxlsx2::wb_open打开现有Excel工作簿",
+    "body": [
+      "openxlsx2::wb_open打开现有Excel工作簿",
+      "openxlsx2::wb_open(",
+      "  wb = 工作簿对象, # 例如 wb 或文件路径字符串",
+      "  interactive = FALSE, # 是否交互式选择文件，默认 FALSE",
+      "  flush = FALSE # 是否刷新临时文件，默认 FALSE",
+      ")",
+      "library(openxlsx2)",
+      "# 创建一个简单的工作簿",
+      "wb <- wb_workbook()\\$add_worksheet(\"示例\")\\$add_data(x = mtcars)",
+      "# 打开工作簿（触发 Excel）",
+      "wb_open(wb, interactive = TRUE, flush = TRUE)"
+    ],
+    "description": ""
+  },
+  "openxlsx2::wb_add_font添加字体样式": {
+    "prefix": "openxlsx2::wb_add_font添加字体样式",
+    "body": [
+      "openxlsx2::wb_add_font添加字体样式",
+      "openxlsx2::wb_add_font(",
+      "  wb = 工作簿对象, # 由 wb_workbook() 或 wb_load() 创建的工作簿对象",
+      "  sheet = current_sheet(), # 目标工作表名称或索引，默认为当前工作表",
+      "  dims = \"A1\", # 单元格区域，如 \"A1\" 或 \"A1:B2\"",
+      "  name = \"Aptos Narrow\", # 字体名称，如 \"Arial\"、\"Times New Roman\"",
+      "  color = wb_color(hex = \"FF000000\"), # 字体颜色，使用 wb_color 指定（ARGB 格式，FF 为不透明）",
+      "  size = \"11\", # 字号，字符串形式，如 \"11\"、\"14\"",
+      "  bold = \"\", # 是否加粗，空字符串表示否，可设为 \"1\" 或 \"true\"",
+      "  italic = \"\", # 是否斜体，空字符串表示否，可设为 \"1\" 或 \"true\"",
+      "  outline = \"\", # 是否使用轮廓字体，空字符串表示否",
+      "  strike = \"\", # 是否添加删除线，空字符串表示否",
+      "  underline = \"\", # 是否添加下划线，空字符串表示否，可设为 \"single\"、\"double\" 等",
+      "  charset = \"\", # 字符集，通常留空",
+      "  condense = \"\", # 是否压缩字体间距，空字符串表示否",
+      "  extend = \"\", # 是否扩展字体间距，空字符串表示否",
+      "  family = 0, # 字体家族，整数 0-14，常用 0(自动)、1(Roman)、2(Swiss)、3(Modern)",
+      "  scheme = \"\", # 字体方案，如 \"minor\"、\"major\"，通常留空",
+      "  shadow = \"\", # 是否添加阴影，空字符串表示否",
+      "  vert_align = \"\", # 垂直对齐方式，如 \"superscript\"、\"subscript\"，通常留空",
+      "  update = FALSE# 是否更新现有字体样式，默认 FALSE 表示覆盖",
+      ")",
+      "",
+      "library(openxlsx2)",
+      "# 创建一个工作簿并写入数据",
+      "wb <- wb_workbook()\\$add_worksheet(\"示例\")\\$add_data(x = data.frame(",
+      "  姓名 = c(\"张三\", \"李四\", \"王五\"),",
+      "  成绩 = c(85, 92, 78)",
+      "))",
+      "",
+      "# 为标题单元格 A1 设置自定义字体：Arial、红色、加粗、16号",
+      "wb <- wb_add_font(",
+      "  wb = wb,",
+      "  sheet = \"示例\",",
+      "  dims = \"A1:B1\",",
+      "  name = \"Arial\",",
+      "  color = wb_color(hex = \"FFFF0000\"),  # 红色（ARGB：FF=不透明，FF0000=纯红）",
+      "  size = \"16\",",
+      "  bold = \"1\",",
+      "  italic = \"true\",",
+      "  strike = \"true\", # 是否添加删除线，空字符串表示否",
+      "  underline = \"single\", # 是否添加下划线，空字符串表示否，可设为 \"single\"、\"double\" 等",
+      "  update = FALSE",
+      ")",
+      "# 为数据区域 A2:B4 设置字体：Calibri、蓝色、11号",
+      "wb <- wb_add_font(",
+      "  wb = wb,",
+      "  sheet = \"示例\",",
+      "  dims = \"A2:B4\",",
+      "  name = \"Calibri\",",
+      "  color = wb_color(hex = \"FF0000FF\"),  # 蓝色",
+      "  size = \"11\",",
+      "  bold = \"\",",
+      "  italic = \"\",",
+      "  update = FALSE",
+      ")",
+      "# 打开工作簿",
+      "wb_open(wb,interactive = TRUE,flush = TRUE)",
+      ""
+    ],
+    "description": ""
+  },
+  "openxlsx2::remove_comment删除注释": {
+    "prefix": "openxlsx2::remove_comment删除注释",
+    "body": [
+      "openxlsx2::remove_comment删除注释",
+      "remove_comment(",
+      "  wb = 工作簿对象, # 由 wb_workbook() 或 wb_load() 创建的工作簿对象",
+      "  sheet = 工作表名或索引, # 目标工作表，如 \"Sheet1\" 或 1",
+      "  col = NULL, # 要删除注释的列索引或列名向量，如 1 或 \"A\"",
+      "  row = NULL, # 要删除注释的行索引向量，如 1:3",
+      "  gridExpand = TRUE, # 是否将 col 和 row 组合扩展为所有交叉单元格，默认 TRUE",
+      "  dims = NULL # 单元格区域字符串，如 \"A1:B2\"，若指定则忽略 col 和 row",
+      ")",
+      "",
+      "library(openxlsx2)",
+      "# 创建工作簿并添加数据",
+      "wb <- wb_workbook()\\$add_worksheet(\"示例\")\\$",
+      "  add_data(x = data.frame(姓名 = c(\"张三\", \"李四\"), 成绩 = c(85, 92)))",
+      "",
+      "# 添加两个注释",
+      "wb <- wb_add_comment(wb, sheet = \"示例\", dims = \"A1\", comment = \"姓名列标题\")",
+      "wb <- wb_add_comment(wb, sheet = \"示例\", dims = \"B2\", comment = \"李四的成绩\")",
+      "# 删除 B2 的注释",
+      "wb <- wb_remove_comment(wb, sheet = \"示例\", dims = \"B2\")",
+      "wb <- wb_remove_comment(wb,sheet = current_sheet(),dims=\"A1\")",
+      "# 随时查看",
+      "wb_open(wb,interactive = TRUE,flush = TRUE)"
+    ],
+    "description": ""
+  },
+  "openxlsx2::read_xml读取XML文件或字符串": {
+    "prefix": "openxlsx2::read_xml读取XML文件或字符串",
+    "body": [
+      "openxlsx2::read_xml读取XML文件或字符串",
+      "read_xml(",
+      "  xml = \"XML字符串、文件路径或网址\", # 要读的东西，直接扔进来",
+      "  pointer = TRUE, # 默认TRUE,将对象的内存地址的指针赋值给对象，当前对话有效，对象通过指针去内存找数据。反之将数据副本赋值给对象",
+      "  escapes = FALSE,#转义默认FALSE，是否把实体引用&amp;变真的&",
+      "  declaration = FALSE,#是否保留开头<?xml...?>声明，通常无所谓",
+      "  whitespace = TRUE, # 是否保留纯空格换行的空白节点，不想要就设FALSE",
+      "  empty_tags = FALSE, # 空标签写成<tag/>还是<tag></tag>，默认自闭合就行",
+      "  skip_control = TRUE, # 遇到非法字符自动跳过，别改成FALSE否则会报错",
+      "  comments = FALSE # 是否保留<!--注释-->，需要读注释就设TRUE",
+      ")",
+      "library(xml2)",
+      "xml_string <- '<?xml version=\"1.0\" encoding=\"UTF-8\"?>",
+      "<root>",
+      "  <empty_tag></empty_tag>",
+      "  <whitespace>   </whitespace>",
+      "  <escaped>Tom &amp; Jerry</escaped>",
+      "  <!-- 这是一个注释 -->",
+      "  <normal>文本</normal>",
+      "</root>'",
+      "doc_default <- openxlsx2::read_xml(",
+      "  xml_string, # 要读的东西，直接扔进来",
+      "  pointer = TRUE, # 默认TRUE,将对象的内存地址的指针赋值给对象，当前对话有效，对象通过指针去内存找数据。反之将数据副本赋值给对象",
+      "  escapes = FALSE,#转义默认FALSE，是否把实体引用&amp;变真的&",
+      "  declaration = FALSE,#是否保留开头<?xml...?>声明，通常无所谓",
+      "  whitespace = TRUE, # 是否保留纯空格换行的空白节点，不想要就设FALSE",
+      "  empty_tags = FALSE, # 空标签写成<tag/>还是<tag></tag>，默认自闭合就行",
+      "  skip_control = TRUE, # 遇到非法字符自动跳过，别改成FALSE否则会报错",
+      "  comments = FALSE # 是否保留<!--注释-->，需要读注释就设TRUE",
+      ")",
+      "print(doc_default)",
+      ""
+    ],
+    "description": ""
+  }
+}
