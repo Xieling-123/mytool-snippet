@@ -9,12 +9,12 @@ git add .
 git commit -m "snippet 备份1"
 git remote add origin https://github.com/Xieling-123/mytool-snippet.git
 git push -u origin master
-::---------更新-------------------------------------------------
-cd D:\mytool\01_doc\snippet
-git status
-git add .
+::---------更新-------------------------------------------------cd D:\mytool\01_doc\snippet
+git status              # 查看改动
+git pull                # 【先拉取远程最新变更，避免冲突】
+git add .               # 添加本地改动
 git commit -m "更新内容：修复脚本错误 / 增加注释等"
-git push origin master
+git push origin master  # 推送
 ::---------------------------------------------------------------
 
 @echo off
