@@ -1,0 +1,73 @@
+::------首次-----------------------------------------------------
+git config --global user.name "你的GitHub用户名"
+git config --global user.email "你的GitHub邮箱"
+建立.gitignore文件
+cd D:\mytool\01_doc\snippet
+git init
+git add .
+git commit -m "snippet 备份1"
+git remote add origin https://github.com/Xieling-123/mytool-snippet.git
+git push -u origin master
+::---------更新-------------------------------------------------
+cd D:\mytool\01_doc\snippet
+git status
+git add .
+git commit -m "更新内容：修复脚本错误 / 增加注释等"
+git push origin master
+::---------------------------------------------------------------
+
+@echo off
+:: ============================================================
+:: 脚本名称：backup_snippets.bat
+:: 功能    ：将 VS Code 和 Positron 的 snippets 文件夹备份到指定目录
+:: 作者    ：用户自定义
+:: 版本    ：1.1 (2026-08-27)
+:: ============================================================
+:: 【使用说明】
+:: 1. 直接双击运行，备份完成后按任意键退出。
+:: 2. 若源文件夹不存在，脚本会跳过并提示警告，不会报错中止。
+:: 3. 备份采用增量复制，只复制新增或修改的文件，已存在的旧文件不会被删除。
+:: 4. 如需修改备份路径，请编辑下方 "set" 行中的路径。
+:: ============================================================
+
+title Snippet Backup Tool
+echo 开始备份 Snippets 文件...
+
+:: ---------- 定义源路径和目标路径（根据您的实际情况修改）----------
+:: VS Code 的 snippets 源文件夹
+set "VSCODE_SOURCE=C:\Users\20503\AppData\Roaming\Code\User\snippets"
+:: VS Code 的备份目标文件夹
+set "VSCODE_TARGET=D:\mytool\01_doc\snippet\vscode_snippet_backup"
+
+:: Positron 的 snippets 源文件夹
+set "POSITRON_SOURCE=C:\Users\20503\AppData\Roaming\Positron\User\snippets"
+:: Positron 的备份目标文件夹
+set "POSITRON_TARGET=D:\mytool\01_doc\snippet\positron_snippet_backup"
+
+:: ---------- 备份 VS Code ----------
+:: 检查源文件夹是否存在，避免因路径不存在而报错
+if exist "%VSCODE_SOURCE%" (
+    echo 正在备份 VS Code Snippets ...
+    :: robocopy 参数解释：
+    ::   /E        复制所有子目录（包括空目录）
+    ::   /COPY:DAT 复制文件的数据、属性和时间戳（不涉及审计信息，避免权限错误）
+    ::   /R:3      失败时重试 3 次
+    ::   /W:5      每次重试间隔 5 秒
+    robocopy "%VSCODE_SOURCE%" "%VSCODE_TARGET%" /E /COPY:DAT /R:3 /W:5
+    echo VS Code 备份完成。
+) else (
+    echo [警告] VS Code 源文件夹不存在，已跳过。
+)
+
+:: ---------- 备份 Positron ----------
+if exist "%POSITRON_SOURCE%" (
+    echo 正在备份 Positron Snippets ...
+    robocopy "%POSITRON_SOURCE%" "%POSITRON_TARGET%" /E /COPY:DAT /R:3 /W:5
+    echo Positron 备份完成。
+) else (
+    echo [警告] Positron 源文件夹不存在，已跳过。
+)
+
+echo 所有备份操作已完成。
+:: 暂停窗口，让您查看结果，按任意键关闭
+pause
