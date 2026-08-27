@@ -2,10 +2,12 @@
 title Snippet Backup Tool
 echo Start backup...
 
+
 set "VSCODE_SOURCE=C:\Users\20503\AppData\Roaming\Code\User\snippets"
 set "VSCODE_TARGET=D:\mytool\01_doc\snippet\vscode_snippet_backup"
 set "POSITRON_SOURCE=C:\Users\20503\AppData\Roaming\Positron\User\snippets"
 set "POSITRON_TARGET=D:\mytool\01_doc\snippet\positron_snippet_backup"
+
 
 if exist "%VSCODE_SOURCE%" (
     echo Backing up VS Code snippets...
@@ -24,4 +26,5 @@ if exist "%POSITRON_SOURCE%" (
 )
 
 echo All operations finished.
+
 pause
