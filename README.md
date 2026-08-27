@@ -1,4 +1,4 @@
-# Snippet 自动备份工具
+# Snippet 自动备份工具----本地文件夹之间相互备份
 
 > 一键备份 VS Code 和 Positron 的用户代码片段（snippets）到指定目录，并支持 Git 版本管理。
 
