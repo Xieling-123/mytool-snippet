@@ -1,4 +1,4 @@
-::---------------------------------------------------------------
+::------首次-----------------------------------------------------
 git config --global user.name "你的GitHub用户名"
 git config --global user.email "你的GitHub邮箱"
 建立.gitignore文件
@@ -8,6 +8,12 @@ git add .
 git commit -m "snippet 备份1"
 git remote add origin https://github.com/Xieling-123/mytool-snippet.git
 git push -u origin master
+::---------更新-------------------------------------------------
+cd D:\mytool\01_doc\snippet
+git status
+git add .
+git commit -m "更新内容：修复脚本错误 / 增加注释等"
+git push origin master
 ::---------------------------------------------------------------
 
 @echo off
