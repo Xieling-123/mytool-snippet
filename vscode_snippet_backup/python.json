@@ -72,5 +72,16 @@
       "# 悬停+F12或者Ctrl+点击${0}"
     ],
     "description": "帮助"
+  },
+  "虚拟环境激活和安装包": {
+    "prefix": "虚拟环境激活和安装包",
+    "body": [
+      "# 1、激活环境安装包",
+      "# source venv/Scripts/activat",
+      "# pip install 包名 ",
+      "# 2、或者直接虚拟环境安装对应的包",
+      "# ./venv/Scripts/python -m pip install 包名 requests beautifulsoup4"
+    ],
+    "description": "在终端信息输入窗口进行输入，终端里面可以编写各种shell解释器和编程语言解释器能解释的语言，环境激活和安装包需要在终端进行"
   }
 }
