@@ -75,5 +75,76 @@
       "strcpy(str1,str2);"
     ],
     "description": "把str2复制到str1"
+  },
+  "struct": {
+    "prefix": "struct",
+    "body": [
+      "// 定义结构体",
+      "struct 结构体名称",
+      "{",
+      "    /* 多种数据类型 */",
+      "    char name[20];",
+      "    int age;",
+      "    float score;",
+      "};",
+      "// 调用结构体相当于定义变量，",
+      "// struct 结构体名称 变量名，",
+      "// struct student stu[2];相当于两个结构体对象"
+    ],
+    "description": "结构体定义和声明，可以声明多个结构体对象，相当于定义了一个字典"
+  },
+  "void函数定义": {
+    "prefix": "void函数定义",
+    "body": [
+      "void 函数名(){",
+      "    printf(\"你好\\n\");",
+      "}",
+      "int main() {",
+      "    sayhello();",
+      "    // 函数调用",
+      "    return 0;",
+      "}"
+    ],
+    "description": "函数定义 函数调用"
+  },
+  "void函数定义无返回值函数": {
+    "prefix": "void函数定义无返回值函数",
+    "body": [
+      "void 函数名(){",
+      "    printf(\"你好\\n\");",
+      "  //  return 表达式；",
+      "",
+      "}",
+      "int main() {",
+      "    sayhello();",
+      "    // 函数调用",
+      "    return 0;",
+      "}"
+    ],
+    "description": "函数定义 函数调用"
+  },
+  "union联合体": {
+    "prefix": "union联合体",
+    "body": [
+      "#include <stdio.h>",
+      "union Data",
+      "{",
+      "    int i;",
+      "    float f;",
+      "    char c;",
+      "};",
+      "",
+      "int main()",
+      "{",
+      "    union Data d;",
+      "    d.i = 87;",
+      "    printf(\"输出d.i=%d\\n\", d.i);",
+      "    printf(\"输出d.c=%c\\n\", d.c);",
+      "    d.f = 3.14;",
+      "    printf(\"输出d.f=%f\\n\", d.f);",
+      "    return 0;",
+      "}"
+    ],
+    "description": "所有成员公用一块内存，同一时间只能用一个，大小等于最大成员的大小"
   }
 }
