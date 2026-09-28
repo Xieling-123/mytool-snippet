@@ -1,0 +1,79 @@
+{
+  "int main": {
+    "prefix": "int main",
+    "body": [
+      "#include <stdio.h>",
+      "int main() {",
+      "    return 0;",
+      "}"
+    ],
+    "description": "c语言必要框架,c语言里面的库stdio.h"
+  },
+  "printf": {
+    "prefix": "printf",
+    "body": [
+      "printf(\"输出%d\",变量);"
+    ],
+    "description": "输出变量值"
+  },
+  "scanf": {
+    "prefix": "scanf",
+    "body": [
+      "printf(\"请输入:\");",
+      "scanf(\"%d\",&n);"
+    ],
+    "description": "c语言输入变量"
+  },
+  "/*": {
+    "prefix": "/*",
+    "body": [
+      "/*多行注释*/"
+    ],
+    "description": "多行注释"
+  },
+  "ifelse": {
+    "prefix": "ifelse",
+    "body": [
+      "if (n%2==0){",
+      "    printf(\"您输入的数据是偶数%d\",n);",
+      "}else{",
+      "    printf(\"您输入的数据是奇数%d\",n);",
+      "}"
+    ],
+    "description": "条件分支语句"
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for (int i = 0; i < n; i++)",
+      "{",
+      "printf(\"输出\\n\");",
+      "}"
+    ],
+    "description": "for里面放初值，条件，步长"
+  },
+  "return 1": {
+    "prefix": "return 1",
+    "body": [
+      "        return 1;",
+      "        // 1代表程序有错误直接退出，0代表程序正常结束执行成功"
+    ],
+    "description": "程序出现异常直接退出"
+  },
+  "return 0": {
+    "prefix": "return 0",
+    "body": [
+      "        return 0;",
+      "        // 1代表程序有错误直接退出，0代表程序正常结束执行成功"
+    ],
+    "description": "程序无误执行成功"
+  },
+  "strcpy": {
+    "prefix": "strcpy",
+    "body": [
+      "#include <string.h>",
+      "strcpy(str1,str2);"
+    ],
+    "description": "把str2复制到str1"
+  }
+}
