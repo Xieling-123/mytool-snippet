@@ -1,0 +1,292 @@
+{
+  "System.out.println": {
+    "prefix": "System.out.println",
+    "body": [
+      "System.out.println(name+\"年龄\"+age);"
+    ],
+    "description": "打印"
+  },
+  "int": {
+    "prefix": "int",
+    "body": [
+      "//类型 名字 = 值;",
+      "int a =10,b=9; ",
+      "double score =98;",
+      "char grade='A';",
+      "boolean flag =true;",
+      "String name = \"张三\";"
+    ],
+    "description": "类型定义"
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if (){",
+      "",
+      "}else{",
+      "    ",
+      "}"
+    ],
+    "description": "if else"
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for (int i=0;i<n;i++){",
+      "    ",
+      "}"
+    ],
+    "description": "for循环"
+  },
+  "public class 文件名": {
+    "prefix": "public class 文件名",
+    "body": [
+      "import java.util.Scanner;",
+      "public class 类名就是文件名{",
+      "    public static void main(String[] args){",
+      "        System.out.println(\"打印\");",
+      "        // 代码",
+      "    }",
+      "}"
+    ],
+    "description": "程序骨架 代码写在里面"
+  },
+  "public static 类型 函数名": {
+    "prefix": "public static 类型 函数名",
+    "body": [
+      "    // 定义方法",
+      "    public static int add(int a, int b) {",
+      "        return a + b;",
+      "    }",
+      "    // 方法调用",
+      "    public static void main(String[] args) {",
+      "        int result = add(3, 5);",
+      "        System.out.println(\"结果: \" + result);",
+      "    }"
+    ],
+    "description": "函数定义域调用"
+  },
+  "class 类名": {
+    "prefix": "class 类名",
+    "body": [
+      "// 类定义",
+      "class Student {",
+      "    // 变量类型",
+      "    String name;",
+      "    int age;",
+      "    // 类属性",
+      "    Student(String name, int age) {",
+      "        this.name = name;",
+      "        this.age = age;",
+      "    }",
+      "    // 类方法",
+      "    void printInfo() {",
+      "        System.out.println(name + \" \" + age);",
+      "    }",
+      "}",
+      "// 类调用",
+      "public class example {",
+      "    public static void main(String[] args) {",
+      "        // 创建类对象",
+      "        Student s1 = new Student(\"张三\", 18);",
+      "        Student s2 = new Student(\"李四\", 20);",
+      "        // 调用方法",
+      "        s1.printInfo();",
+      "        s2.printInfo();",
+      "    }",
+      "",
+      "}"
+    ],
+    "description": "类定义 类调用"
+  },
+  "try catch finally": {
+    "prefix": "try catch finally",
+    "body": [
+      "public class Demo {",
+      "    public static void main(String[] args) {",
+      "//尝试执行，异常捕获，最终一定执行",
+      "        try {",
+      "            int a = 10;",
+      "            int b = 0;",
+      "            System.out.println(a / b);   // 除以 0，会出错",
+      "        } catch (Exception e) {",
+      "            System.out.println(\"出错了: \" + e.getMessage());",
+      "        } finally {",
+      "            System.out.println(\"无论如何都会执行\");",
+      "        }",
+      "    }",
+      "}"
+    ],
+    "description": "异常捕获 尝试做，异常捕获，最终一定执行"
+  },
+  "ArrayList<类型>": {
+    "prefix": "ArrayList<类型> 可变长度列表",
+    "body": [
+      "// 集合：不需要规定长度，直接创建空的",
+      "",
+      "import java.util.ArrayList;",
+      "",
+      "ArrayList<String> 姓名列表 = new ArrayList<>();",
+      "姓名列表.add(\"张三\");        // 添加",
+      "姓名列表.add(\"李四\");",
+      "姓名列表.add(\"王五\");",
+      "",
+      "String 第一个 = 姓名列表.get(0);   // 获取第0个",
+      "int 总个数 = 姓名列表.size();      // 长度",
+      "姓名列表.remove(\"李四\");           // 删除",
+      "boolean 有没有张三 = 姓名列表.contains(\"张三\"); // 是否包含"
+    ],
+    "description": "集合"
+  },
+  "String[]": {
+    "prefix": "String[]",
+    "body": [
+      "// 数组：声明时必须规定长度，这里定死只能装 3 个",
+      "String[] names = new String[3];"
+    ],
+    "description": "数组"
+  },
+  "int[] 整数数组": {
+    "prefix": "int[] 整数数组",
+    "body": [
+      "// 整数数组",
+      "int[] 分数数组 = {90, 85, 88};"
+    ],
+    "description": "整数数组定义和赋值"
+  },
+  "String[] 字符串数组": {
+    "prefix": "String[] 字符串数组",
+    "body": [
+      "// 固定长度，声明时就要定好能装几个",
+      "String[] 姓名数组 = new String[3];   // 能装3个字符串",
+      "姓名数组[0] = \"张三\";",
+      "姓名数组[1] = \"李四\";",
+      "姓名数组[2] = \"王五\";"
+    ],
+    "description": "字符串数组"
+  },
+  "HashMap<String,Integer> 名字": {
+    "prefix": "HashMap<String,Integer> 名字",
+    "body": [
+      "import java.util.HashMap;",
+      "",
+      "HashMap<String, Integer> 成绩表 = new HashMap<>();",
+      "成绩表.put(\"语文\", 90);      // 存键值对",
+      "成绩表.put(\"数学\", 95);",
+      "成绩表.put(\"英语\", 88);",
+      "",
+      "int 数学成绩 = 成绩表.get(\"数学\");   // 取值",
+      "boolean 有没有语文 = 成绩表.containsKey(\"语文\");",
+      "成绩表.remove(\"英语\");               // 删除"
+    ],
+    "description": "键值对，类似字典"
+  },
+  "HashSet<String> 集合名字": {
+    "prefix": "HashSet<String> 集合名字",
+    "body": [
+      "import java.util.HashSet;",
+      "",
+      "HashSet<String> 姓名集合 = new HashSet<>();",
+      "姓名集合.add(\"张三\");",
+      "姓名集合.add(\"李四\");",
+      "姓名集合.add(\"张三\");   // 重复，加不进去",
+      "",
+      "boolean 有没有张三 = 姓名集合.contains(\"张三\");",
+      "int 大小 = 姓名集合.size();"
+    ],
+    "description": "不重复集合"
+  },
+  "LinkedList<String> ": {
+    "prefix": "LinKedList<String>",
+    "body": [
+      "import java.util.LinkedList;",
+      "",
+      "LinkedList<String> 链表 = new LinkedList<>();",
+      "链表.add(\"A\");",
+      "链表.add(\"B\");",
+      "链表.addFirst(\"开头\");   // 加到最前面",
+      "链表.addLast(\"结尾\");    // 加到最后面",
+      "",
+      "String 第一个 = 链表.getFirst();",
+      "String 最后一个 = 链表.getLast();"
+    ],
+    "description": "链表，当队列或者栈"
+  },
+  "Queue<String> 队列": {
+    "prefix": "Queue<String> 队列",
+    "body": [
+      "import java.util.LinkedList;",
+      "import java.util.Queue;",
+      "",
+      "Queue<String> 队列 = new LinkedList<>();",
+      "队列.offer(\"第一\");   // 入队",
+      "队列.offer(\"第二\");",
+      "队列.offer(\"第三\");",
+      "",
+      "String 出队 = 队列.poll();   // 取出并删除队头",
+      "String 看队头 = 队列.peek(); // 只看不删"
+    ],
+    "description": "队列先进先出"
+  },
+  "Stack<String> 栈": {
+    "prefix": "Stack<String> 栈",
+    "body": [
+      "import java.util.Stack;",
+      "",
+      "Stack<String> 栈 = new Stack<>();",
+      "栈.push(\"第一\");   // 压栈",
+      "栈.push(\"第二\");",
+      "栈.push(\"第三\");",
+      "",
+      "String 出栈 = 栈.pop();    // 弹出栈顶",
+      "String 看栈顶 = 栈.peek(); // 只看不弹"
+    ],
+    "description": "栈 后进先出"
+  },
+  "double": {
+    "prefix": "double",
+    "body": [
+      "double score =98;"
+    ],
+    "description": ""
+  },
+  "char": {
+    "prefix": "char",
+    "body": [
+      "char grade='A';"
+    ],
+    "description": ""
+  },
+  "boolean": {
+    "prefix": "boolean",
+    "body": [
+      "boolean flag =true;"
+    ],
+    "description": ""
+  },
+  "String": {
+    "prefix": "String",
+    "body": [
+      "String name = '张三';"
+    ],
+    "description": ""
+  },
+  "System.out.printf": {
+    "prefix": "System.out.printf",
+    "body": [
+      "        System.out.printf(\"用户 %s 今年 %d 岁,余额 %.2f 元\\n\",用户名,年龄,余额);"
+    ],
+    "description": "格式化输出"
+  },
+  "sc.next": {
+    "prefix": "sc.next",
+    "body": [
+      "Scanner sc = new Scanner(System.in);",
+      "System.out.println(\"请输入用户名\");",
+      "String 用户名 = sc.next();// 读入单词，next可修改其他方法",
+      "",
+      "sc.close();"
+    ],
+    "description": "导入工具包里面的某个类，创建一个对象，使用里面的方法读入数据赋值给变量"
+  }
+}
