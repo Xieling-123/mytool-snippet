@@ -288,5 +288,119 @@
       "sc.close();"
     ],
     "description": "导入工具包里面的某个类，创建一个对象，使用里面的方法读入数据赋值给变量"
+  },
+  "if elseif else": {
+    "prefix": "if elseif else",
+    "body": [
+      "    if (用户等级==1) {",
+      "        System.out.println(\"普通会员无折扣\");",
+      "    } else if (用户等级==2) {",
+      "        System.out.println(\"银牌会员，9折\");",
+      "    } else if (用户等级==3){",
+      "        System.out.println(\"金牌会员，8折\");",
+      "    } else {",
+      "        System.out.println(\"非会员原价\");",
+      "    }"
+    ],
+    "description": "条件分支"
+  },
+  "switch case default": {
+    "prefix": "switch case default",
+    "body": [
+      "    switch (用户支付状态) {",
+      "        case \"待支付\":",
+      "            System.out.println(\"请尽快支付\");",
+      "            break;",
+      "        case \"已支付\":",
+      "            System.out.println(\"准备发货\");",
+      "        case \"已发货\":",
+      "            System.out.println(\"正在配送\");",
+      "        case \"已完成\":",
+      "            System.out.println(\"交易完成\");",
+      "        default:",
+      "            System.out.println(\"未知状态\");",
+      "    }"
+    ],
+    "description": "可选择"
+  },
+  "for增强": {
+    "prefix": "for增强",
+    "body": [
+      "        String[] 用户列表 = {\"张三\",\"李四\",\"王五\"};",
+      "        for (String 用户:用户列表){",
+      "            System.out.println(\"用户：\"+用户);"
+    ],
+    "description": "遍历列表里面的每个对象"
+  },
+  "dowhile": {
+    "prefix": "dowhile",
+    "body": [
+      "        do{",
+      "            System.out.println(\"显示菜单(至少显示一次)\");",
+      "            选择++;",
+      "        }while(选择<3);"
+    ],
+    "description": "先做一遍才开始基于判断条件下一步是否继续执行"
+  },
+  "while": {
+    "prefix": "while",
+    "body": [
+      "        int 库存 =3;",
+      "        while(库存>0){",
+      "            System.out.println(\"卖出1件，剩余\"+(库存-1));",
+      "            库存--;",
+      "        }"
+    ],
+    "description": "先判断条件在执行循环体"
+  },
+  "int[][] 二维数组循环遍历for": {
+    "prefix": "int[][] 二维数组循环遍历for",
+    "body": [
+      "        int[][] 各班成绩 = {",
+      "            {90, 85, 88,90},",
+      "            {90, 85, 88,90},",
+      "            {90, 85, 88,90},",
+      "            {90, 85, 88,90}",
+      "        };",
+      "        System.out.println(\"===二维数组===\");",
+      "        for (int i=0;i<各班成绩.length;i++){",
+      "            System.out.println(\"第\"+(i+1)+\"个班\");",
+      "            for (int j=0;j<各班成绩[i].length;j++){",
+      "                System.out.println(各班成绩[i][j]+\" \");",
+      "            }",
+      "            System.out.println();"
+    ],
+    "description": "定义一个二维数组，循环遍历出里面的一维对象 两个for循环"
+  },
+  "for for if": {
+    "prefix": "for for if",
+    "body": [
+      "        int[] 成绩 = { 90, 85, 88 };",
+      "",
+      "        System.out.println(\"===一维数组===\");",
+      "        for (int i = 0; i < 成绩.length; i++) {",
+      "            System.out.println(\"第\" + (i + 1) + \"个成绩\" + 成绩[i]);",
+      "        }",
+      "        int 最高分 = 成绩[0];",
+      "        for (int i = 0; i < 成绩.length; i++) {",
+      "            if (成绩[i] > 最高分) {",
+      "                最高分 = 成绩[i];",
+      "            }",
+      "        }",
+      "        System.out.println(\"最高分：\" + 最高分);"
+    ],
+    "description": "遍历每个对象的成绩，遍历判断每个对象的成绩是否符合条件最高分，for for if"
+  },
+  "int[][] 二维数组": {
+    "prefix": "int[][] 二维数组",
+    "body": [
+      "        int[][] 各班成绩 = {",
+      "            {90, 85, 88,90},",
+      "            {90, 85, 88,90},",
+      "            {90, 85, 88,90},",
+      "            {90, 85, 88,90}",
+      "        };"
+    ],
+    "description": "二维数组的变量的定义"
   }
 }
