@@ -1,0 +1,266 @@
+{
+  "let 变量：类型=变量值": {
+    "prefix": "let 变量：变量类型=变量值",
+    "body": [
+      "let username:string =\"张三\";//string,number,boolean,null,undefined"
+    ],
+    "description": "变量类型定义"
+  },
+  "console.log": {
+    "prefix": "console.log",
+    "body": [
+      "console.log(`打印：\\${变量}`);"
+    ],
+    "description": "打印"
+  },
+  "let 变量=变量值": {
+    "prefix": "let 变量=变量值",
+    "body": [
+      "let use0rname =\"张三\";//string,number,boolean,null,undefined"
+    ],
+    "description": "无需声明变量类型通常情况下，除了有特殊要求"
+  },
+  "let 变量": {
+    "prefix": "let 变量",
+    "body": [
+      "let use1rname:string ;//string,number,boolean,null,undefined",
+      "use1rname=\"稍后赋值需要标注变量类型\";"
+    ],
+    "description": "变量声明稍后赋值"
+  },
+  "let 变量:类型1 | 类型2": {
+    "prefix": "let 变量:类型1 | 类型2",
+    "body": [
+      "let id:string | number;//string,number,boolean,null,undefined",
+      "console.log(id=\"string\",id=49);"
+    ],
+    "description": "联合类型"
+  },
+  "function if else": {
+    "prefix": "function if else",
+    "body": [
+      "function 送通知(title:string,content:string,attachment?:string):void {",
+      "    console.log(`标题：\\${title}`);",
+      "    console.log(`内容：\\${content}`);",
+      "    if (attachment !== undefined) {",
+      "        console.log(`附件\\${attachment}`);",
+      "    }else{",
+      "        console.log(\"附件:无\");",
+      "    }",
+      "}",
+      "送通知(\"会议通知\",\"下午3点开会\");"
+    ],
+    "description": "自定义函数里面嵌套ifelse"
+  },
+  "function if elseif else": {
+    "prefix": "function if elseif else",
+    "body": [
+      "function 函数名2(id:string | number | boolean | null | number[]=[1,2]) {",
+      "    if (typeof id === \"string\") {",
+      "        console.log(\"输出\",id.toUpperCase());",
+      "    }else if(typeof id === \"number\"){",
+      "        console.log(\"输出\",id.toFixed(11));",
+      "    }else if( id === null){",
+      "        console.log(\"输出\",id);",
+      "    }else if(Array.isArray(id)){",
+      "        console.log(\"输出\",id);",
+      "    }else{",
+      "        console.log(\"输出\",id);",
+      "    }",
+      "}",
+      "函数名2(\"dddddd\");函数名2(9);函数名2(true);函数名2(null);函数名2([2,3,4,4])"
+    ],
+    "description": "自定义函数里面嵌套多条件分支语句"
+  },
+  "&变量": {
+    "prefix": "&变量",
+    "body": [
+      "`打印：\\${变量}`"
+    ],
+    "description": "反引号&{变量}"
+  },
+  "let 变量:变量1|变量2：": {
+    "prefix": "let 变量：变量1|变量2;",
+    "body": [
+      "let use1rname:\"up\"|\"down\"|\"left\"|\"right\" ;//string,number,boolean,null,undefined",
+      "use1rname=\"right\";//字面量类型，只能赋值指定字符串"
+    ],
+    "description": "定义字面量，变量的值只能在指定范围内选择"
+  },
+  "function switch case break type字面量": {
+    "prefix": "function switch case break type字面量",
+    "body": [
+      "type 状态 = \"1\"|\"2\"|\"3\";//字面量",
+      "function renderUI(变量:状态) {",
+      "    switch (变量) {",
+      "        case \"1\":",
+      "            console.log(`打印：\\${变量}`);",
+      "            break;",
+      "        case \"2\":",
+      "            console.log(`打印：\\${变量}`);",
+      "            break;",
+      "        case \"3\":",
+      "        console.log(`打印：\\${变量}`);",
+      "            break;",
+      "        default:",
+      "            break;",
+      "    }",
+      "}",
+      "renderUI(\"1\");renderUI(\"2\");"
+    ],
+    "description": "字面量定义了变量的可选范围 自定义函数 使用switch case break"
+  },
+  "const": {
+    "prefix": "const",
+    "body": [
+      "interface Address{",
+      "    city:string;",
+      "    street:string;",
+      "}//定义对象的类型",
+      "interface Person{",
+      "    name:string;",
+      "    age:number;",
+      "    isAdmin:boolean;",
+      "    address:Address;",
+      "}//定义对象的类型",
+      "",
+      "const person:Person={",
+      "    name:\"张三\",",
+      "    age:25,",
+      "    isAdmin:false,",
+      "    address:{",
+      "        city:\"北京\",",
+      "        street:\"朝阳区\"",
+      "    },",
+      "};//创建满足类型的对象",
+      "console.log(\"person\",JSON.stringify(person));"
+    ],
+    "description": "先定义对象的类型，再创建对象，打印对象可以按json的字符串"
+  },
+  "function return": {
+    "prefix": "function return",
+    "body": [
+      "function 计算(价格:number,质量:number) :number{",
+      "    return 价格*质量;",
+      "}",
+      "console.log(计算(9,10));",
+      ""
+    ],
+    "description": "函数和返回值"
+  },
+  "const interface": {
+    "prefix": "const interface",
+    "body": [
+      "interface Address{",
+      "    city:string;",
+      "    street:string;",
+      "}//定义对象的类型",
+      "interface Person{",
+      "    name:string;",
+      "    age:number;",
+      "    isAdmin:boolean;",
+      "    address:Address;",
+      "}//定义对象的类型",
+      "",
+      "const person:Person={",
+      "    name:\"张三\",",
+      "    age:25,",
+      "    isAdmin:false,",
+      "    address:{",
+      "        city:\"北京\",",
+      "        street:\"朝阳区\"",
+      "    },",
+      "};//创建满足类型的对象",
+      "console.log(\"person\",JSON.stringify(person));"
+    ],
+    "description": "先定义对象的类型，再创建对象，打印对象可以按json的字符串"
+  },
+  "const interface function": {
+    "prefix": "const interface function",
+    "body": [
+      "interface Address{",
+      "    city:string;",
+      "    street:string;",
+      "}//定义对象的类型",
+      "",
+      "interface Person{",
+      "    name:string;",
+      "    age:number;",
+      "    isAdmin:boolean;",
+      "    address:Address;",
+      "}//定义对象的类型",
+      "",
+      "const person:Person={",
+      "    name:\"张三\",",
+      "    age:25,",
+      "    isAdmin:false,",
+      "    address:{",
+      "        city:\"北京\",",
+      "        street:\"朝阳区\"",
+      "    },",
+      "};//创建满足类型的对象",
+      "",
+      "function 用户(person:Person) :string{",
+      "    return `姓名\\${person.name},年龄\\${person.age},地址:\\${person.address.city}\\${person.address.street}`;",
+      "}//作为传入对象",
+      "",
+      "console.log(用户(person));//调用函数"
+    ],
+    "description": "嵌套对象作为function的传入参数"
+  },
+  "class基础类": {
+    "prefix": "class",
+    "body": [
+      "class Address {",
+      "  constructor(",
+      "    public city: string,",
+      "    public street: string,",
+      "  ) {}",
+      "}//属性构造函数相当于方法",
+      "",
+      "class Person {",
+      "  constructor(",
+      "    public name: string,",
+      "    public age: number,",
+      "    public isAdmin: boolean,",
+      "    public address: Address,",
+      "  ) {}",
+      "",
+      "    用户():string{",
+      "    return `姓名:\\\\${this.name},年龄:\\\\${this.age},地址:\\\\${this.address.city}\\\\${this.address.city}\\\\${this.address.street}`;",
+      "}",
+      "}//属性+方法",
+      "",
+      "const person=new Person(",
+      "    \"张三\",34,false,new Address(\"北京\",\"朝阳区\")",
+      ");//创建对象含有多个属性和一个嵌套属性",
+      "",
+      "console.log(person.用户());//调用方法"
+    ],
+    "description": "基础类 含有嵌套属性"
+  },
+  "const interface function return{}": {
+    "prefix": "const interface function return{}",
+    "body": [
+      "interface ApiResponse {",
+      "    code: number;",
+      "    message: string;",
+      "    data: string[];",
+      "}",
+      "",
+      "function fetchUserList(): ApiResponse {",
+      "    // 模拟调用接口",
+      "    return {",
+      "        code: 200,",
+      "        message: \"success\",",
+      "        data: [\"张三\", \"李四\", \"王五\"],",
+      "    };",
+      "}",
+      "",
+      "const response = fetchUserList();",
+      "console.log(\"接口状态码:\", response.code);",
+      "console.log(\"用户列表:\", response.data);"
+    ],
+    "description": "自定义函数返回值的类型 是对象还是字符串"
+  }
+}
