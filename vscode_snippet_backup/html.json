@@ -1,0 +1,41 @@
+{
+  "!cssjs": {
+    "prefix": "!cssjs",
+    "body": [
+      "<!DOCTYPE html>",
+      "<!-- doctype给出浏览器的识别标准 -->",
+      "",
+      "<html lang=\"en\">",
+      "    <!-- 浏览器用什么语言显示网页 -->",
+      "<head>",
+      "    <meta charset=\"UTF-8\">",
+      "    <!-- 浏览器用什么标准解析 -->",
+      "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "    <!-- 移动端适配，不写手机上面的页面会缩小成一坨 -->",
+      "    <meta name=\"description\" content=\"SEO描述，关键字，实际开发常加，按实际需求修改name和content\">",
+      "",
+      "    <title>标题</title>",
+      "    <!-- 标题，html的浏览器标签页首页，搜索结果第一条 -->",
+      "    <!-- css文件 -->",
+      "    <link rel=\"stylesheet\" href=\"style.css\">",
+      "    <!-- js文件 -->",
+      "    <script src=\"main.js\" defer></script>",
+      "",
+      "</head>",
+      "",
+      "<body>",
+      "    <h1>装什么，怎么设计样式</h1>",
+      "    <p>块和行：</p>",
+      "    <div class=\"block\">",
+      "        块级元素，选这个盒子装这些内容，这个盒子的装饰写在style.css,通过block设计style",
+      "    </div>",
+      "    <span class=\"inline\">",
+      "        行内元素,选择这个盒子装这些内容，这个盒子的装饰写在style.css,通过inline设计style",
+      "    </span>",
+      "</body>",
+      "",
+      "</html>"
+    ],
+    "description": "添加了js和css的接入文件"
+  }
+}

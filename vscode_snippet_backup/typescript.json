@@ -262,5 +262,34 @@
       "console.log(\"用户列表:\", response.data);"
     ],
     "description": "自定义函数返回值的类型 是对象还是字符串"
+  },
+  "function 重载函数": {
+    "prefix": "function 重载函数",
+    "body": [
+      "//具体签名",
+      "function parseValue(value:string):string ;",
+      "function parseValue(value:number):number;",
+      "// 联合实现进而重载函数，将不同函数返回类型中的类型与函数参数输入类型一一对应",
+      "function parseValue(value:string|number):string|number{",
+      "    if (typeof value === \"string\") {",
+      "        return value.toUpperCase();",
+      "    }",
+      "    return value*2;",
+      "}",
+      "//函数调用,const常量,let变量",
+      "const strResult =parseValue(\"hello\");",
+      "console.log(`字符串结果\\${strResult}`);"
+    ],
+    "description": "多个函数签名，在一个函数同时实现叫做重载函数，为了将函数返回值类型与输入类型一一对应"
+  },
+  "function if else 条件?真 输出：假输出": {
+    "prefix": "function if else 条件？真输出：假输出",
+    "body": [
+      "function formatDate(input: number | Date): string {",
+      "  const date = typeof input === \"number\" ? new Date(input) : input;",
+      "  return date.toLocaleDateString(\"zh-CN\");",
+      "}"
+    ],
+    "description": "if else条件判断一样的三元表达式 条件判断？为真输出：为假输出"
   }
 }

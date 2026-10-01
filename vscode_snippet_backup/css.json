@@ -1,0 +1,34 @@
+{
+  "background": {
+    "prefix": "background",
+    "body": [
+      "background: #e0e0e0;",
+      "  /* 行内元素背景色 */"
+    ],
+    "description": "背景色"
+  },
+  "margin": {
+    "prefix": "margin",
+    "body": [
+      "margin: 20px 0;",
+      "  /* 盒子上下留下的空隙：20px，左右0 */"
+    ],
+    "description": "盒子上下留下的空隙"
+  },
+  "padding": {
+    "prefix": "padding",
+    "body": [
+      "padding: 10px;",
+      "  /* 内容和盒子之间的距离：留10px内边距 */"
+    ],
+    "description": "内容与盒子之间的距离"
+  },
+  "border": {
+    "prefix": "border",
+    "body": [
+      "border: 10px solid #ccc;",
+      "  /* 边框设计 */"
+    ],
+    "description": "盒子的边框设计"
+  }
+}
