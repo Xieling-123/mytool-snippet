@@ -146,5 +146,45 @@
       "}"
     ],
     "description": "所有成员公用一块内存，同一时间只能用一个，大小等于最大成员的大小"
+  },
+  "if else ? :": {
+    "prefix": "if else ? :",
+    "body": [
+      "    float 折扣=(总价>100)?0.9f:1.0f;"
+    ],
+    "description": "if else 的另外一种表述形式"
+  },
+  "switch case break": {
+    "prefix": "switch case break",
+    "body": [
+      "    switch (分数/10)",
+      "    {",
+      "    case 10:",
+      "        printf(\"等级A:%d\",分数);",
+      "        break;",
+      "    case 9:",
+      "        printf(\"等级B:%d\",分数);",
+      "        break;",
+      "    case 8:",
+      "        printf(\"等级C:%d\",分数);",
+      "        break;",
+      "    ",
+      "    default:",
+      "        printf(\"等级未知:%d\",分数);",
+      "        break;",
+      "    }"
+    ],
+    "description": "条件判断 做选择"
+  },
+  "count计数器": {
+    "prefix": "count计数器",
+    "body": [
+      "        --count;",
+      "        // 单独放一行那么--count=count--，",
+      "        //  a=--count先计算再赋值",
+      "        //  a=count--先赋值再计算",
+      "        //  a+=count相当于a=a+count"
+    ],
+    "description": "单独一行的计数器符号放前放后没区别，涉及到赋值的计数器，符号放在前面就会先计算再赋值"
   }
 }
