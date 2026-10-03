@@ -47,5 +47,54 @@
       "git push -u origin main"
     ],
     "description": "建立远程main和本地main之间的连接 方便随时使用git push gitpull"
+  },
+  "ni 夹/名 -Force": {
+    "prefix": "ni 夹/名 -Forece",
+    "body": [
+      "# 同步创建",
+      "ni 文件夹/文件名 -Force"
+    ],
+    "description": "同步创建"
+  },
+  "git 日常更新": {
+    "prefix": "git 日常更新",
+    "body": [
+      "cd .\\go1                # 进入项目（如果已经在了就不用）",
+      "git add .               # 把所有改动加入暂存区",
+      "git commit -m \"修改了ps1的编码格式以支持中文\"  # 提交并写说明",
+      "git push                # 推送到 GitHub"
+    ],
+    "description": "日常更新 注意保存gbk确保能以中文打开"
+  },
+  "git 首次推送": {
+    "prefix": "git 首次推送",
+    "body": [
+      "# 1. 进入项目目录",
+      "cd .\\go1",
+      "",
+      "# 2. 检查是否有 .gitignore 文件，没有就新建一个（重要）",
+      "# 你可以用 ni .gitignore 命令创建并填入忽略规则",
+      "ni .gitignore",
+      "Set-Content .\\.gitignore \"*.exe\", \".vscode/\", \"go.sum\"",
+      "",
+      "# 3. 初始化仓库",
+      "git init",
+      "",
+      "# # 4. 配置当前用户（如果第一次用 Git，必须设置，否则 commit 会报错）",
+      "# git config user.name \"Xieling-123\"",
+      "# git config user.email \"你的GitHub邮箱@example.com\"",
+      "",
+      "# 5. 添加暂存并提交",
+      "git add .",
+      "git commit -m \"first push: \\$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')\"",
+      "",
+      "# 6. 关联远程仓库（前提是 GitHub 上已建好空仓库）",
+      "git remote add origin https://github.com/Xieling-123/go1.git",
+      "",
+      "# 7. 强制重命名为 main 分支，并推送",
+      "git branch -M main",
+      "git push -u origin main"
+    ],
+    "description": ""
   }
 }
