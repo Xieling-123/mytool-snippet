@@ -1,0 +1,51 @@
+{
+  "git add .": {
+    "prefix": "git add .",
+    "body": [
+      "git add ."
+    ],
+    "description": ".所在目录的所有改动全部放进暂存区域"
+  },
+  "git commit -m": {
+    "prefix": "git commit -m",
+    "body": [
+      "git commit -m \"first: \\$(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')\""
+    ],
+    "description": "push的注释"
+  },
+  "git push": {
+    "prefix": "git push",
+    "body": [
+      "git push"
+    ],
+    "description": "推送上去"
+  },
+  "git init": {
+    "prefix": "git init",
+    "body": [
+      "git init"
+    ],
+    "description": "仓库初始化"
+  },
+  "git remote set-url或者首次add": {
+    "prefix": "git remote set-url或者首次add",
+    "body": [
+      "git remote set-url origin https://github.com/Xieling-123/C1.git"
+    ],
+    "description": "建立对应仓库之后关联远程仓库"
+  },
+  "git branch -M main": {
+    "prefix": "git branch -M main",
+    "body": [
+      "git branch -M main"
+    ],
+    "description": "新项目一定至少有一条分支 强制叫做main"
+  },
+  "git push -u origin main": {
+    "prefix": "git push -u origin main",
+    "body": [
+      "git push -u origin main"
+    ],
+    "description": "建立远程main和本地main之间的连接 方便随时使用git push gitpull"
+  }
+}

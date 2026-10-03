@@ -5,5 +5,99 @@
       "` `"
     ],
     "description": ""
+  },
+  "func main()": {
+    "prefix": "func main()",
+    "body": [
+      "package main",
+      "import \"fmt\"",
+      "func main()  {",
+      "\tfmt.Println(\"hello\")",
+      "}"
+    ],
+    "description": "打印"
+  },
+  "fmt.Println": {
+    "prefix": "fmt.Println",
+    "body": [
+      "fmt.Println(\"L\")"
+    ],
+    "description": "打印"
+  },
+  ":=": {
+    "prefix": ":=",
+    "body": [
+      ":="
+    ],
+    "description": "修改变量"
+  },
+  "func main 基础后端": {
+    "prefix": "func main 基础后端",
+    "body": [
+      "package main",
+      "",
+      "import (",
+      "\t\"fmt\"",
+      "\t\"net/http\"",
+      ")",
+      "",
+      "func main() {",
+      "\t// 注册路由：访问/时，执行helloHandler",
+      "\thttp.HandleFunc(\"/\", 处理函数)",
+      "",
+      "\t// 启动服务器，监听8080端口",
+      "\tfmt.Println(\"服务器启动，访问 http://localhost:8080\")",
+      "\thttp.ListenAndServe(\":8080\", nil)",
+      "",
+      "}",
+      "",
+      "// 处理函数：接收请求 返回响应",
+      "func 处理函数(响应 http.ResponseWriter, 请求 *http.Request) {",
+      "\t// 从网址中获取用户的输入参数",
+      "\tname := 请求.URL.Query().Get(\"name\")",
+      "",
+      "\tif name == \"\" {",
+      "\t\tname = \"陌生人\"",
+      "\t}",
+      "\tfmt.Fprintf(响应, \"hello,%s这是后端服务器\", name)",
+      "}",
+      ""
+    ],
+    "description": "最简单的后端"
+  },
+  "fmt.Fprintf": {
+    "prefix": "fmt.Fprintf",
+    "body": [
+      "fmt.Fprintf(响应, \"hello,%s这是后端服务器\", name)"
+    ],
+    "description": "格式化输出打印"
+  },
+  "http.HandleFunc": {
+    "prefix": "http.HandleFunc",
+    "body": [
+      "http.HandleFunc(\"/\", helloHandler)"
+    ],
+    "description": "注册路由"
+  },
+  "http.ListenAndServe": {
+    "prefix": "http.ListenAndServe",
+    "body": [
+      "http.ListenAndServe(\":8080\", nil)"
+    ],
+    "description": "启动服务器，监听8080端口"
+  },
+  "const 常量 =值": {
+    "prefix": "const 常量 = 值",
+    "body": [
+      "const 常量 = 值"
+    ],
+    "description": "常量定义"
+  },
+  "var 地址 类型范围 = 二进制位相当于值": {
+    "prefix": "var 地址 类型范围=二进制位相当于值",
+    "body": [
+      "var 地址 类型范围=二进制位相当于值"
+    ],
+    "description": "变量值赋值相当于找内存划一块大小出来计量单位用二进制计量，变量名经过编译之后编程地址"
   }
 }
