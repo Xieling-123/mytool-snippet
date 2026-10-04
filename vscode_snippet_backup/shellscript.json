@@ -457,5 +457,78 @@
       "uvicorn main:app --reload"
     ],
     "description": "前后端项目框架建立的命令，还未设置github仓库提交自动化"
+  },
+  "pwd 查当前目录": {
+    "prefix": "pwd 查当前目录",
+    "body": [
+      "# 查看当前目录",
+      "pwd"
+    ],
+    "description": "查看当前的目录"
+  },
+  "cd 路径": {
+    "prefix": "cd 路径",
+    "body": [
+      "# 切换目录",
+      "cd doc-Linux"
+    ],
+    "description": "导航到当前路径状态下"
+  },
+  "mkdir 新建文件夹": {
+    "prefix": "mkdir 新建文件夹",
+    "body": [
+      "# 创建一个新文件夹",
+      "mkdir linux_1"
+    ],
+    "description": "快速新建一个文件夹"
+  },
+  "rm 删除的文件名": {
+    "prefix": "rm 删除的文件名",
+    "body": [
+      "# 删除一个文件",
+      "rm tempCodeRunnerFile.sh"
+    ],
+    "description": "删除对应的文件名"
+  },
+  "#!": {
+    "prefix": "#!",
+    "body": [
+      "#!/bin/bash",
+      "# bash .sh运行"
+    ],
+    "description": ".sh文件的开头必备 帮助识别"
+  },
+  "rm -r 文件名": {
+    "prefix": "rm -r 文件名",
+    "body": [
+      "# 删除文件夹",
+      "rm -r 文件名"
+    ],
+    "description": "删除文件夹"
+  },
+  "lsb_release -a 查当前ubuntu的版本号": {
+    "prefix": "lsb_release -a 查当前版本ubuntu",
+    "body": [
+      "# 检查当前ubuntu",
+      "lsb_release -a",
+      ""
+    ],
+    "description": "版本号查询"
+  },
+  "sudo apt install 安装软件": {
+    "prefix": "sudo apt install 安装",
+    "body": [
+      "# 借助sudo管家去apt软件商店uodate一份软件清单,install 软件-yes",
+      "sudo apt update",
+      "sudo apt install xfce4 xfce4-goodies -y"
+    ],
+    "description": "先知道软件清单有哪些 拉完之后 自动升级所有软件"
+  },
+  "sudo apt remove 软件": {
+    "prefix": "sudo apt remove 软件 卸载",
+    "body": [
+      "sudo apt remove xfce4 xfce4-goodies"
+    ],
+    "description": "卸载软件"
   }
 }
